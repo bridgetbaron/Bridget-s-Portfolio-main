@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const title = "Home";
+---
+
+<Layout>
+  <section id="hero">
+    <div class="hero--wrapper">
+      <div class="hero--text">
+        <h1 class="hero--h1">Bridget Baron</h1>
+        <h2 class="hero--h2">Marketing & Digital Strategy</h2>
+        <h3 class="hero--h3">
+          Design Lead | Project Manager | Story-driven Creator
+        </h3>
+        <p>
+          My work focuses on how thoughtful communication and digital
+          experiences influence audience behavior. Through UX research, content
+          creation, and storytelling, I explore how brands can better connect
+          with people online.
+        </p>
+      </div>
+      <div>
+        <img
+          class="hero--image"
+          src="src/assets/bridget-pic.jpg"
+          alt="Picture of Bridget Baron"
+        />
+      </div>
+      <a href="/work" class="hero--button">View my work</a>
+    </div>
+  </section>
+  <hr />
+  <section id="article">
+    <div class="article--wrapper">
+      <h1 class="article--h1">Featured Recognition</h1>
+
+      <hr />
+      <p class="article--description">
+        Recognized by the <i>Wall Street Journal</i> and The <i
+          >Jimmy Fallon Show</i
+        > for high-performing content...
+      </p>
+
+      <div class="article--link-container">
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://www.wsj.com/lifestyle/workplace/the-new-in-demand-job-skill-being-a-tiktok-influencer-for-your-company-9ca9d232?gaa_at=eafs&gaa_n=AWEtsqevFfYk6nPfLTpv5geYxBbBR8y2gcdNrxL17Ro0G7VIgRJ3FW9o80K9KPlE4dU%3D&gaa_ts=69a4b9c1&gaa_sig=s4lpq9I3Yb1V7yShpMc2iNeD1W1sWPpnZDJN1cruhirwgA2Y9_cZPkaT78STj8NWT_t3_W3m4UDygqaNjKI8gw%3D%3D"
+          ><img class="article--image" src="src/assets/WSJ-4.jpg" /></a
+        >
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://www.wsj.com/video/series/on-the-news/companies-are-creating-their-own-influencer-programs/EFD2A01B-E1C7-45FB-941F-9B0D019E2A97"
+          ><img class="article--image" src="src/assets/WSJ-3.jpg" /></a
+        >
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://youtu.be/WV9RuwT7Svg"
+          ><img class="article--image" src="src/assets/jimmy-fallon.jpg" /></a
+        >
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  section {
+    padding: 2rem 0;
+  }
+
+  img {
+    /* box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 20%); */
+  }
+
+  /* HERO SECTION */
+
+  #hero {
+  }
+
+  .hero--wrapper {
+    display: grid;
+    place-items: center;
+    max-width: 1000px;
+    padding: 0 3rem;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero--text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero--h1 {
+    font-size: 4rem;
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+
+  .hero--h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 200;
+  }
+
+  .hero--h3 {
+    font-size: 1rem;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  .hero--image {
+    width: 16rem;
+    border-radius: 1rem;
+    height: auto;
+  }
+
+  .hero--button {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+    text-align: center;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+    transition: 0.1s ease;
+  }
+
+  .hero--button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
+  .hero--button:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: none;
+  }
+
+  /* ARTICLE SECTION */
+
+  .article--wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    outline: 2px solid var(--dark-text);
+    background-color: var(--background-color-light);
+  }
+
+  .article--h1 {
+    font-family: var(--serif);
+    font-size: 3rem;
+  }
+
+  .article--link-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .article--link {
+    display: flex;
+
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    transition: 0.1s ease;
+  }
+
+  .article--link:hover {
+    opacity: 70%;
+  }
+
+  .article--image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+
+  .article--description {
+    font-size: 1.25rem;
+  }
+
+  /* PROJETS */
+
+  /* CONTACT */
+  .contact--button {
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 2rem;
+    transition: 0.1s ease;
+  }
+
+  .contact--button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
+  .contact--button:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: none;
+  }
+
+  i {
+    font-style: italic;
+  }
+</style>

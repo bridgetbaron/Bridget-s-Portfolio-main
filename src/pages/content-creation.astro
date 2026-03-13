@@ -1,0 +1,315 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WorkNav from "../components/WorkNav.astro";
+
+const videos = [
+  {
+    title: "Red Cup Day",
+    description: "@bridgetthebarista",
+    views: "841.7K views",
+    src: "/videos/v12300gd0001d4ag7kfog65rp8c3105g.mp4",
+    tiktok: "https://www.tiktok.com/t/ZThnvV3LT/",
+  },
+  {
+    title: "Brown Sugar Foam",
+    description: "@starbucks",
+    views: "266.7K views",
+    src: "/videos/v12025gd0000d0f5i3vog65r25d3e810.mp4",
+    tiktok: "https://www.tiktok.com/t/ZThnvVg76/",
+  },
+  {
+    title: "Red Apron Hype",
+    description: "@starbuckspartners",
+    views: "20.8K views",
+    src: "/videos/v15044gf0000d4afkcfog65r962844ng.mp4",
+    tiktok: "https://www.tiktok.com/t/ZThnvnBm5/",
+  },
+  {
+    title: "Eggnog Is Back",
+    description: "@bridgetthebarista",
+    views: "",
+    src: "/videos/v12300gd0001d4nkc67og65kk9cd220g.mp4",
+    tiktok: "https://www.tiktok.com/t/ZThnvuHCM/",
+  },
+  {
+    title: "Apple is Back",
+    description: "@bridgetthebarista",
+    views: "",
+    src: "/videos/v12300gd0001d3jb7kfog65osju6uppg.mp4",
+    tiktok: "https://www.tiktok.com/t/ZThnvtHxX/",
+  },
+];
+---
+
+<Layout>
+  <div class="spacer"></div>
+  <WorkNav />
+
+  <section id="content-creation">
+    <h1>CONTENT CREATION</h1>
+
+    <div class="video-grid">
+      {
+        videos.map((video, index) => (
+          <div class="video-card">
+            <div class="phone-frame" data-video={video.src}>
+              <video
+                class="preview-video"
+                src={video.src}
+                muted
+                loop
+                autoplay
+                playsinline
+              />
+            </div>
+
+            <div class="video-info">
+              <h2 class="video-title">{video.title}</h2>
+
+              <p class="video-description">{video.description}</p>
+
+              {video.views && <p class="video-views">{video.views}</p>}
+
+              <a class="video-link" href={video.tiktok} target="_blank">
+                Watch on TikTok
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section id="text">
+    <div class="text-wrapper">
+      <h1 class="content-header">About My Content</h1>
+      <p>
+        I create short-form video content centered around authentic
+        behind-the-scenes moments as a Starbucks barista. My content focuses on
+        storytelling, humor, and everyday experiences that resonate with both
+        customers and partners.
+      </p>
+      <p>
+        I have been part of the Starbucks Green Apron Creator program for over a
+        year, beginning in the original pilot team of eight creators. Through
+        this program, I completed multiple training and mentorship programs
+        focused on content strategy, brand storytelling, and responsible digital
+        creation.
+      </p>
+      <p>
+        My work has been recognized internally and externally, including being
+        highlighted at the Starbucks Leadership Experience 2025 for successful
+        creator content. I also produce training videos designed to help new
+        creators understand topics such as content strategy, copyright, and
+        brand-safe storytelling.
+      </p>
+    </div>
+  </section>
+
+  <div id="videoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <video id="modalVideo" controls preload="metadata" playsinline>
+      Your browser does not support HTML5 video.
+    </video>
+  </div>
+</Layout>
+
+<style>
+  .text-wrapper {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin: auto;
+    outline: 2px solid var(--dark-text);
+    background-color: var(--background-color-light);
+    max-width: 800px;
+  }
+
+  .content-header {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .text-wrapper p {
+    margin-bottom: 1rem;
+  }
+  .spacer {
+    height: 8px;
+  }
+
+  #text {
+    padding-bottom: 2rem;
+  }
+
+  #content-creation {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .video-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .video-card {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phone-frame {
+    width: 200px;
+    height: 380px;
+    border: 2px solid black;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .phone-frame:hover {
+    transform: scale(1.05);
+  }
+
+  .preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video-info {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+
+  .video-title {
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .video-description {
+    color: #777;
+    font-size: 0.95rem;
+  }
+
+  .video-views {
+    color: #999;
+    font-size: 0.9rem;
+  }
+
+  .video-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .video-link:hover {
+    opacity: 0.8;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal video {
+    max-height: 80%;
+    border-radius: 1rem;
+  }
+
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const modalPlayer = document.getElementById("modalVideo");
+  if (modalPlayer) {
+    modalPlayer.addEventListener("error", () => {
+      console.error("Video failed to load:", modalPlayer.error);
+    });
+  }
+
+  /**
+   * Get the configured video src for a given card index.
+   * This keeps the modal synced with the rendered list.
+   */
+  function getVideoSrcForIndex(index) {
+    const frame = document.querySelectorAll(".phone-frame")[index];
+    return frame?.dataset?.video ?? "";
+  }
+
+  // attach click listeners to every video card
+  document.querySelectorAll(".phone-frame").forEach((frame, index) => {
+    frame.addEventListener("click", () => {
+      openModal(index);
+    });
+  });
+
+  function openModal(index) {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("modalVideo");
+
+    const src = getVideoSrcForIndex(index);
+    if (!src) {
+      console.error("No video source found for index", index);
+      return;
+    }
+
+    player.src = src;
+    player.load();
+
+    modal.style.display = "flex";
+
+    player.play().catch((err) => {
+      // Autoplay might be blocked; user can press play manually.
+      console.warn("Video playback prevented:", err);
+    });
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("modalVideo");
+
+    player.pause();
+    modal.style.display = "none";
+  }
+
+  // Close modal when clicking outside the video
+  document.getElementById("videoModal").addEventListener("click", (e) => {
+    if (e.target.id === "videoModal") {
+      closeModal();
+    }
+  });
+</script>

@@ -1,0 +1,72 @@
+---
+// frontmatter: determine current path to apply an active class
+const currentPath = Astro.url.pathname;
+---
+
+<div>
+  <nav>
+    <a
+      class={`nav--button ${currentPath === "/work" ? "active" : ""}`}
+      href="/work"
+    >
+      UX/Product Design
+    </a>
+    <a
+      class={`nav--button ${currentPath === "/content-creation" ? "active" : ""}`}
+      href="/content-creation"
+    >
+      Content Creation
+    </a>
+    <a
+      class={`nav--button ${currentPath === "/featured" ? "active" : ""}`}
+      href="/featured"
+    >
+      Featured
+    </a>
+  </nav>
+</div>
+
+<style>
+  div {
+    width: 100%;
+    margin: 0.75rem 0;
+    background-color: var(--background-color-light);
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--dark-text);
+    border-bottom: 1px solid var(--dark-text);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav--button {
+    color: var(--light-text);
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: 50rem;
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+    transition: 0.1s ease;
+  }
+
+  .nav--button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
+  .nav--button:active {
+    transform: translateY(1px) translateX(1px);
+    box-shadow: none;
+  }
+
+  /* active/current page button background override */
+  .nav--button.active {
+    /* use a specific hex color rather than filters */
+    background-color: #4a4a9a;
+  }
+</style>

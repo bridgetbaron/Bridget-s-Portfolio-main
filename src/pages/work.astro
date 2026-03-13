@@ -1,0 +1,339 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WorkNav from "../components/WorkNav.astro";
+
+const title = "Work";
+---
+
+<Layout>
+  <div class="spacer"></div>
+  <WorkNav />
+  <section id="hero">
+    <div class="hero--text">
+      <h1 class="hero--h1">After Hours</h1>
+      <h2 class="hero--h2">Design Lead & Project Manager</h2>
+      <p class="hero--description">
+        This project explores how research and design can reveal insights about
+        user behavior and digital engagement. The case study highlights my
+        process for understanding audiences and designing experiences that
+        better support their needs.
+      </p>
+      <h3 class="hero--h3">My Roles:</h3>
+      <ul class="hero--role-list">
+        <li class="hero--role">Front end</li>
+        <li class="hero--role">User research</li>
+        <li class="hero--role">Design</li>
+      </ul>
+    </div>
+    <div class="hero--picutre-section">
+      <div class="hero--wireframe-wrapper">
+        <img class="hero--wireframe" src="/src/assets/Wireframe (1).jpg" />
+        <img class="hero--wireframe" src="/src/assets/Wireframe (2).jpg" />
+        <img class="hero--wireframe" src="/src/assets/Wireframe (3).jpg" />
+      </div>
+      <div class="hero--wireframe-text-wrapper">
+        <p class="hero--wireframe-description">
+          After Hours is a mobile app concept designed to help young adults
+          reconnect socially after college by discovering interest-based events
+          and meeting others in real life. The platform focuses on transparency,
+          accountability, and community-building to reduce the anxiety of
+          attending events alone.
+        </p>
+        <a
+          target="_blank"
+          class="hero--wireframe-button"
+          href="https://www.figma.com/proto/SvTRGd8szfGc8ycCTKjruM/After-Hours?node-id=133-995&starting-point-node-id=125%3A1119&t=vAWGnumz9IZcQNwa-1"
+          >Figma Link</a
+        >
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section id="timeline">
+    <h1 class="timeline--h1">Process</h1>
+    <hr class="timeline--hr" />
+    <div class="timeline--wrapper">
+      <div class="timeline--card">
+        <p class="timeline--card-title">User Research</p>
+        <p class="timeline--card-description">
+          Interviewed young adults about social connection and event discovery.
+        </p>
+      </div>
+      <div class="timeline--card">
+        <p class="timeline--card-title">Problem Definition</p>
+        <p class="timeline--card-description">
+          Identified key barriers to attending social events alone.
+        </p>
+      </div>
+      <div class="timeline--card">
+        <p class="timeline--card-title">Ideation</p>
+        <p class="timeline--card-description">
+          Developed solutions focused on visibility, trust, and shared
+          interests.
+        </p>
+      </div>
+      <div class="timeline--card">
+        <p class="timeline--card-title">Low-Fidelity Prototyping</p>
+        <p class="timeline--card-description">
+          Created wireframes to test event discovery and interaction flow.
+        </p>
+      </div>
+      <div class="timeline--card">
+        <p class="timeline--card-title">User Testing</p>
+        <p class="timeline--card-description">
+          Gathered feedback to refine navigation and social features.
+        </p>
+      </div>
+      <div class="timeline--card">
+        <p class="timeline--card-title">High-Fidelity Prototype</p>
+        <p class="timeline--card-description">
+          Designed the final After Hours prototype in Figma.
+        </p>
+      </div>
+    </div>
+    <div class="timeline--info">
+      <div>
+        <h2 class="timeline--h2">Impact & Outcome</h2>
+        <p>
+          This project revealed how thoughtful product design can influence user
+          confidence and behavior. Insights from user interviews informed
+          features that improve transparency, communication, and event
+          discovery, helping users feel more comfortable engaging in real-world
+          social experiences.
+        </p>
+      </div>
+      <div class="timeline--button-wrapper">
+        <div class="v-spacer"></div>
+        <a
+          target="_blank"
+          class="hero--wireframe-button"
+          href="https://www.figma.com/proto/SvTRGd8szfGc8ycCTKjruM/After-Hours?node-id=133-995&starting-point-node-id=125%3A1119&t=vAWGnumz9IZcQNwa-1"
+          >View Figma Prototype</a
+        >
+        <!-- <a
+          href="./assets/after-hours-case.pdf"
+          download="After_Hours_Case_Study"
+          class="hero--wireframe-button-hollow"
+        >
+          <button type="button">Download Case Study (PDF)</button>
+        </a> -->
+        <a
+          target="_blank"
+          class="hero--wireframe-button-hollow"
+          href="https://docs.google.com/document/d/1OSB33zh7Q4YWhmbXHxwAPBgNY1sPjZeh0-BKq-s-vt4/edit?usp=sharing"
+          >Download Case Study (PDF)</a
+        >
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .spacer {
+    height: 8px;
+  }
+
+  /* HERO SECTION */
+
+  #hero {
+    display: grid;
+    place-items: center;
+    padding: 0 3rem;
+    margin: auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero--h1 {
+    margin-top: 4rem;
+    font-size: 4rem;
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+
+  .hero--h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .hero--h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: var(--serif);
+  }
+
+  .hero--description {
+    margin-bottom: 4rem;
+  }
+
+  .hero--role-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero--role {
+    padding: 0.5rem 1rem;
+    border-radius: 50rem;
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 0.8rem;
+  }
+
+  /* Right side hero section */
+
+  .hero--picutre-section {
+    outline: 1px solid var(--dark-text);
+    background-color: var(--background-color-light);
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .hero--wireframe-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color:;
+    padding: 1rem 0.5rem;
+  }
+
+  .hero--wireframe {
+    width: 30%;
+    margin: auto;
+    outline: 1px solid var(--dark-text);
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+    border-radius: 1rem;
+  }
+
+  .hero--wireframe-text-wrapper {
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero--wireframe-description {
+    margin-bottom: 2rem;
+  }
+
+  .hero--wireframe-button {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+
+    border-radius: 1rem;
+    transition: 0.1s ease;
+  }
+
+  .hero--wireframe-button:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
+  .hero--wireframe-button:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: none;
+  }
+
+  .hero--wireframe-button-hollow {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--background-color-light);
+    color: var(--dark-text);
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 2px 2px 1px 1px var(--dark-text);
+    outline: 1px solid var(--dark-text);
+    border-radius: 1rem;
+    transition: 0.1s ease;
+  }
+
+  .hero--wireframe-button-hollow:hover {
+    opacity: 70%;
+    cursor: pointer;
+  }
+
+  .hero--wireframe-button-hollow:active {
+    transform: translateY(2px) translateX(2px);
+    box-shadow: none;
+  }
+
+  /* Timeline */
+
+  #timeline {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .timeline--h1 {
+    margin-top: 2rem;
+
+    font-size: 3rem;
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+
+  .timeline--hr {
+    margin-bottom: 2rem;
+  }
+
+  .timeline--wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0 3rem;
+  }
+
+  .timeline--card {
+    flex: 1;
+    background-color: var(--background-color-light);
+    padding: 1rem;
+    outline: 1px solid var(--dark-text);
+    border-radius: 1rem;
+  }
+
+  .timeline--card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    /* font-family: var(--serif); */
+  }
+
+  /* BOttom part */
+
+  .timeline--info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    place-items: center;
+    margin-top: 2rem;
+
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .timeline--h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  .timeline--button-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

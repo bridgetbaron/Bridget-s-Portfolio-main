@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #676fdf;
+  --secondary-color: #dde3ff;
+  --background-color: #fdf5c8;
+  --background-color-light: #fff6db;
+
+  --dark-text: rgb(50, 50, 50);
+  --light-text: rgb(231, 231, 231);
+
+  --sans: Helvetica, Arial, sans-serif;
+  --serif: "Times New Roman", serif;
+}
+
+body {
+  font-family: var(--sans);
+  background-color: var(--background-color-light);
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  background-color: var(--background-color);
+  width: 100%;
+  outline: 1px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+}
