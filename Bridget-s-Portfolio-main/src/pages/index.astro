@@ -9,13 +9,15 @@ const title = "Home";
     <div class="hero--wrapper">
       <div class="hero--text">
         <h1 class="hero--h1">Bridget Baron</h1>
-        <h2 class="hero--h2">UX Designer & Content Strategist</h2>
+        <h2 class="hero--h2">Marketing & Digital Strategy</h2>
         <h3 class="hero--h3">
-          Deisgn Lead | Project Manager | Story-driven Creator
+          Design Lead | Project Manager | Story-driven Creator
         </h3>
         <p>
-          I design thoughtful digital experiences and create content that
-          connects brands to real people
+          My work focuses on how thoughtful communication and digital
+          experiences influence audience behavior. Through UX research, content
+          creation, and storytelling, I explore how brands can better connect
+          with people online.
         </p>
       </div>
       <div>
@@ -31,9 +33,15 @@ const title = "Home";
   <hr />
   <section id="article">
     <div class="article--wrapper">
-      <h1 class="article--h1">Featured in the Wall Street Journal</h1>
+      <h1 class="article--h1">Featured Recognition</h1>
+
       <hr />
-      
+      <p class="article--description">
+        Recognized by the <i>Wall Street Journal</i> and The <i
+          >Jimmy Fallon Show</i
+        > for high-performing content...
+      </p>
+
       <div class="article--link-container">
         <a
           class="article--link"
@@ -47,22 +55,13 @@ const title = "Home";
           href="https://www.wsj.com/video/series/on-the-news/companies-are-creating-their-own-influencer-programs/EFD2A01B-E1C7-45FB-941F-9B0D019E2A97"
           ><img class="article--image" src="src/assets/WSJ-3.jpg" /></a
         >
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://youtu.be/WV9RuwT7Svg"
+          ><img class="article--image" src="src/assets/jimmy-fallon.jpg" /></a
+        >
       </div>
-      <p class="article--description">
-        Recognized by the Wall Street Journal and The Jimmy Fallon Show for high-performing content...
-      </p>
-    </div>
-  </section>
-  <hr />
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Best Projects here</p>
-  </section>
-  <hr />
-  <section id="contact">
-    <div>
-      <p>Let's get in touch!</p>
-      <a href="/contact" class="contact--button">Contact</a>
     </div>
   </section>
 </Layout>
@@ -164,11 +163,12 @@ const title = "Home";
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .article--link {
     display: flex;
+
     width: 90%;
     margin: auto;
     align-items: center;
@@ -183,7 +183,8 @@ const title = "Home";
 
   .article--image {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 1.5rem;
   }
 
@@ -216,5 +217,9 @@ const title = "Home";
   .contact--button:active {
     transform: translateY(2px) translateX(2px);
     box-shadow: none;
+  }
+
+  i {
+    font-style: italic;
   }
 </style>

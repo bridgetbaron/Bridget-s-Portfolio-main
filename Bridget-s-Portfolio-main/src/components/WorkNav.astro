@@ -6,22 +6,22 @@ const currentPath = Astro.url.pathname;
 <div>
   <nav>
     <a
-      class={`nav--button ${currentPath === '/work' ? 'active' : ''}`}
+      class={`nav--button ${currentPath === "/work" ? "active" : ""}`}
       href="/work"
     >
       UX/Product Design
     </a>
     <a
-      class={`nav--button ${currentPath === '/content-creation' ? 'active' : ''}`}
+      class={`nav--button ${currentPath === "/content-creation" ? "active" : ""}`}
       href="/content-creation"
     >
       Content Creation
     </a>
     <a
-      class={`nav--button ${currentPath === '/graphic-design' ? 'active' : ''}`}
-      href="/graphic-design"
+      class={`nav--button ${currentPath === "/featured" ? "active" : ""}`}
+      href="/featured"
     >
-      Graphic Design
+      Featured
     </a>
   </nav>
 </div>

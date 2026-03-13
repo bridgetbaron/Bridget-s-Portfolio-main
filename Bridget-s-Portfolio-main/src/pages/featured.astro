@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import WorkNav from "../components/WorkNav.astro";
+
+const title = "Work";
+---
+
+<Layout>
+  <div class="spacer"></div>
+  <WorkNav />
+  <section id="article">
+    <div class="article--wrapper">
+      <h1 class="article--h1">Featured Recognition</h1>
+
+      <hr />
+      <p class="article--description">
+        My content was recognized by <i>The Wall Street Journal</i>and later
+        mentioned on <i>The Tonight Show Starring Jimmy Fallon</i>, highlighting
+        the growing influence of authentic, creator-led storytelling.
+      </p>
+
+      <div class="article--link-container">
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://www.wsj.com/lifestyle/workplace/the-new-in-demand-job-skill-being-a-tiktok-influencer-for-your-company-9ca9d232?gaa_at=eafs&gaa_n=AWEtsqevFfYk6nPfLTpv5geYxBbBR8y2gcdNrxL17Ro0G7VIgRJ3FW9o80K9KPlE4dU%3D&gaa_ts=69a4b9c1&gaa_sig=s4lpq9I3Yb1V7yShpMc2iNeD1W1sWPpnZDJN1cruhirwgA2Y9_cZPkaT78STj8NWT_t3_W3m4UDygqaNjKI8gw%3D%3D"
+          ><img class="article--image" src="src/assets/WSJ-4.jpg" /></a
+        >
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://www.wsj.com/video/series/on-the-news/companies-are-creating-their-own-influencer-programs/EFD2A01B-E1C7-45FB-941F-9B0D019E2A97"
+          ><img class="article--image" src="src/assets/WSJ-3.jpg" /></a
+        >
+        <a
+          class="article--link"
+          target="_blank"
+          href="https://youtu.be/WV9RuwT7Svg"
+          ><img class="article--image" src="src/assets/jimmy-fallon.jpg" /></a
+        >
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .spacer {
+    height: 8px;
+  }
+
+  #article {
+    padding: 2rem 0;
+  }
+
+  i {
+    font-style: italic;
+  }
+
+  .article--wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem 1.5rem;
+    outline: 2px solid var(--dark-text);
+    background-color: var(--background-color-light);
+  }
+
+  .article--h1 {
+    font-family: var(--serif);
+    font-size: 3rem;
+  }
+
+  .article--link-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .article--link {
+    display: flex;
+
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    transition: 0.1s ease;
+  }
+
+  .article--link:hover {
+    opacity: 70%;
+  }
+
+  .article--image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+
+  .article--description {
+    font-size: 1.25rem;
+  }
+
+  /* HERO SECTION */
+</style>

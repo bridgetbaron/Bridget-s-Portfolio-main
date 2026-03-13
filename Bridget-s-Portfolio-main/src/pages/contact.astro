@@ -1,9 +1,81 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const title = "contact";
+const title = "About";
 ---
 
 <Layout>
-  <h1>Contact</h1>
+  <h1>Let's Connect</h1>
+  <section id="text">
+    <div class="text-wrapper">
+      <p class="col blurb-wrapper">
+        I’m always interested in opportunities related to marketing, digital
+        strategy, and content. If you’d like to collaborate or learn more about
+        my work, feel free to reach out.
+      </p>
+      <div class="col info-wrapper">
+        <p>Email: bridgetelizabeth04@gmail.com</p>
+        <p>Phone: 919-939-7704</p>
+        <p>
+          LinkedIn: <a
+            class="linkedIn"
+            target="_blank"
+            href="https://linkedin.com/in/bridget-baron">bridget-baron</a
+          >
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
+<style>
+  h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .col {
+    margin: 0 1.5rem;
+  }
+
+  .blurb-wrapper {
+    margin: auto 1rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  section {
+    min-height: 65vh;
+  }
+
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .text-wrapper {
+    padding: 1rem 1.5rem;
+    margin: auto;
+    outline: 2px solid var(--dark-text);
+    background-color: var(--background-color-light);
+    max-width: 800px;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .linkedIn {
+    text-decoration: underline;
+  }
+
+  .linkedIn:hover {
+    opacity: 50%;
+  }
+</style>

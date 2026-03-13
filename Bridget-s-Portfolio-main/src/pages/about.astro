@@ -5,5 +5,64 @@ const title = "About";
 ---
 
 <Layout>
-  <h1>Home</h1>
+  <h1>About Me</h1>
+  <section id="text">
+    <div class="text-wrapper">
+      <p>
+        I’m interested in marketing and digital strategy, with a background in
+        UX and human-computer interaction. My work focuses on understanding how
+        people discover, engage with, and respond to digital experiences across
+        platforms.
+      </p>
+      <p>
+        By combining UX research with content strategy and storytelling, I enjoy
+        translating audience insights into clear messaging, engaging content,
+        and meaningful brand experiences.
+      </p>
+      <p>
+        Alongside my UX projects, I create digital content through the Starbucks
+        Green Apron Creator program. This experience has given me direct insight
+        into audience engagement, digital storytelling, and how brands can
+        connect authentically with online communities.
+      </p>
+      <p>
+        Being part of the original pilot group of creators allowed me to
+        collaborate on content strategy and participate in a month-long training
+        and mentorship program focused on responsible content creation, brand
+        storytelling, and digital communication.
+      </p>
+    </div>
+  </section>
+  <div class="spacer"></div>
 </Layout>
+<style>
+  h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #text {
+    max-width: 800px;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  section {
+    min-height: 65vh;
+  }
+
+  .text-wrapper {
+    padding: 1rem 1.5rem;
+    margin: auto;
+    outline: 2px solid var(--dark-text);
+    background-color: var(--background-color-light);
+  }
+</style>
